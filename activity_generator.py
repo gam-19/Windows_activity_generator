@@ -15,6 +15,9 @@ def install_modules():
         subprocess.call([sys.executable, "-m", "pip", "install", "pyautogui"])
 
 def main():
+    import pyautogui
+    import subprocess
+
     # Obtener hora actual
     now = int(time.time())
 
@@ -46,11 +49,8 @@ def main():
         ])
 
         if action == "Mover mouse":
-            import pyautogui  # Importa pyautogui solo cuando se necesita
             pyautogui.moveRel(random.randint(-100, 100), random.randint(-100, 100))
         elif action == "Escribir en notepad":
-            import subprocess  # Importa subprocess solo cuando se necesita
-            import pyautogui  # Importa pyautogui solo cuando se necesita
             subprocess.Popen(["notepad.exe"])
             time.sleep(2)
             try:
@@ -63,7 +63,7 @@ def main():
             except Exception as e:
                 print(f"An error occurred: {e}")
         elif action == "Busqueda en chrome":
-            import pyautogui  # Importa pyautogui solo cuando se necesita
+            #import pyautogui  # Importa pyautogui solo cuando se necesita
             webbrowser.open("https://www.google.com/search?q=capital+de+%s" % random.choice(countries))
             time.sleep(2)
             pyautogui.hotkey('alt', 'f4')
