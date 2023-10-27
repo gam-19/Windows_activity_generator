@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 import time
 import random
 import webbrowser
@@ -19,7 +20,7 @@ def main():
     import subprocess
 
     # Obtener hora actual
-    now = int(time.time())
+    current_time = datetime.now()
 
     # Preguntar la duración de la actividad
     try:
@@ -37,9 +38,12 @@ def main():
         return
 
     # Convertir la duración de actividad a segundos
-    activity_duration = now + activity_duration * 60
+    #activity_duration = current_time + activity_duration * 60
 
-    while now < activity_duration:
+    # Calcular la duración de la actividad
+    end_time = current_time + timedelta(minutes=activity_duration)
+
+    while datetime.now() < end_time:
         time.sleep(frequency)
 
         action = random.choice([
