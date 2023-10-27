@@ -1,5 +1,11 @@
 WHAT IT DOES
-This is a script to generate activity in a Windows environment. It moves the mouse randomly, opens Notepad, and writes some predefined random text, and it can also Chrome and search some info for random predefined countries.
+
+This is a script to generate activity in a Windows environment. 
+This version does only three actions:
+1. It moves the mouse randomly.
+2. Ppens Notepad, and writes some predefined random text.
+3. And it opens Chrome and search some info for random predefined countries.
+More actions can be included as needed.
 
 PROCESS
 Once the script is run:
