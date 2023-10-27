@@ -17,3 +17,4 @@ https://github.com/gam-19/Windows_activity_generator/blob/master/activity_genera
 3. Run the script from a console
 Go to the path where the script is and type:
 python activity_generator.py
+Note: The first time it might install some python modules if they are not yet install.
